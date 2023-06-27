@@ -1,0 +1,208 @@
+{
+  "tldrawFileFormatVersion": 1,
+  "schema": {
+    "schemaVersion": 1,
+    "storeVersion": 4,
+    "recordVersions": {
+      "asset": {
+        "version": 0,
+        "subTypeKey": "type",
+        "subTypeVersions": {
+          "image": 2,
+          "video": 2,
+          "bookmark": 0
+        }
+      },
+      "camera": {
+        "version": 0
+      },
+      "document": {
+        "version": 1
+      },
+      "instance": {
+        "version": 12
+      },
+      "instance_page_state": {
+        "version": 2
+      },
+      "page": {
+        "version": 0
+      },
+      "shape": {
+        "version": 1,
+        "subTypeKey": "type",
+        "subTypeVersions": {
+          "group": 0,
+          "bookmark": 1,
+          "embed": 1,
+          "image": 2,
+          "text": 1,
+          "video": 1,
+          "arrow": 1,
+          "draw": 1,
+          "frame": 0,
+          "geo": 6,
+          "line": 0,
+          "note": 4,
+          "highlight": 0
+        }
+      },
+      "instance_presence": {
+        "version": 2
+      },
+      "pointer": {
+        "version": 0
+      }
+    }
+  },
+  "records": [
+    {
+      "gridSize": 10,
+      "name": "",
+      "id": "document:document",
+      "typeName": "document"
+    },
+    {
+      "id": "pointer:pointer",
+      "typeName": "pointer",
+      "x": 779.6000366210938,
+      "y": 739.6000061035156,
+      "lastActivityTimestamp": 1687784259688
+    },
+    {
+      "id": "page:-ODWMsDJF1EljvojK4wtV",
+      "name": "Page 1",
+      "index": "a1",
+      "typeName": "page"
+    },
+    {
+      "followingUserId": null,
+      "propsForNextShape": {
+        "opacity": "1",
+        "color": "black",
+        "labelColor": "black",
+        "dash": "draw",
+        "fill": "none",
+        "size": "s",
+        "icon": "file",
+        "font": "draw",
+        "align": "start",
+        "verticalAlign": "start",
+        "geo": "rectangle",
+        "arrowheadStart": "none",
+        "arrowheadEnd": "arrow",
+        "spline": "line"
+      },
+      "brush": null,
+      "scribble": null,
+      "cursor": {
+        "type": "default",
+        "color": "white",
+        "rotation": 0
+      },
+      "isFocusMode": false,
+      "exportBackground": true,
+      "isDebugMode": false,
+      "isToolLocked": true,
+      "screenBounds": {
+        "x": 0,
+        "y": 0,
+        "w": 1203.2000732421875,
+        "h": 654.4000244140625
+      },
+      "zoomBrush": null,
+      "isGridMode": true,
+      "isPenMode": false,
+      "id": "instance:instance",
+      "currentPageId": "page:-ODWMsDJF1EljvojK4wtV",
+      "typeName": "instance"
+    },
+    {
+      "editingId": "shape:HfwcvfDjGsx2Pry1rWxcz",
+      "croppingId": null,
+      "selectedIds": [
+        "shape:HfwcvfDjGsx2Pry1rWxcz"
+      ],
+      "hoveredId": null,
+      "erasingIds": [],
+      "hintingIds": [],
+      "focusLayerId": null,
+      "id": "instance_page_state:page:-ODWMsDJF1EljvojK4wtV",
+      "pageId": "page:-ODWMsDJF1EljvojK4wtV",
+      "typeName": "instance_page_state"
+    },
+    {
+      "x": 310.39996337890625,
+      "y": 74.80001831054688,
+      "z": 0.5,
+      "id": "camera:page:-ODWMsDJF1EljvojK4wtV",
+      "typeName": "camera"
+    },
+    {
+      "x": 84.80003356933594,
+      "y": 343.60003662109375,
+      "rotation": 0,
+      "isLocked": false,
+      "id": "shape:hjCW3J09En5yzuiHFI8o7",
+      "type": "note",
+      "parentId": "page:-ODWMsDJF1EljvojK4wtV",
+      "index": "a1",
+      "props": {
+        "opacity": "1",
+        "color": "black",
+        "size": "s",
+        "text": "Ranking score = (number of downloads * 0.5) + (average rating * 10) - (days since release * 0.1)",
+        "font": "draw",
+        "align": "start",
+        "verticalAlign": "start",
+        "growY": 0,
+        "url": ""
+      },
+      "typeName": "shape"
+    },
+    {
+      "x": 90,
+      "y": 580,
+      "rotation": 0,
+      "isLocked": false,
+      "id": "shape:PO7T7GBpI_y5MG4ZUwbyO",
+      "type": "note",
+      "parentId": "page:-ODWMsDJF1EljvojK4wtV",
+      "index": "a2",
+      "props": {
+        "opacity": "1",
+        "color": "black",
+        "size": "s",
+        "text": "Library can be a view with all users with column game and type of game",
+        "font": "draw",
+        "align": "start",
+        "verticalAlign": "start",
+        "growY": 0,
+        "url": ""
+      },
+      "typeName": "shape"
+    },
+    {
+      "x": 684.4000854492188,
+      "y": 268.3999938964844,
+      "rotation": 0,
+      "isLocked": false,
+      "id": "shape:HfwcvfDjGsx2Pry1rWxcz",
+      "type": "note",
+      "parentId": "page:-ODWMsDJF1EljvojK4wtV",
+      "index": "a3",
+      "props": {
+        "opacity": "1",
+        "color": "black",
+        "size": "s",
+        "text": "no page for admin ",
+        "font": "draw",
+        "align": "start",
+        "verticalAlign": "start",
+        "growY": 0,
+        "url": ""
+      },
+      "typeName": "shape"
+    }
+  ]
+}
