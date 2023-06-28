@@ -24,6 +24,7 @@ export default function Login(props) {
                 id="username"
                 type="text"
                 placeholder="Username"
+                required
               />
             </div>
             <div className="mb-2">
@@ -38,6 +39,7 @@ export default function Login(props) {
                 id="password"
                 type="password"
                 placeholder="******************"
+                required
               />
             </div>
             <div className="leading-6 w-auto h-4 mb-2 text-white">
@@ -46,14 +48,14 @@ export default function Login(props) {
             <div className="flex items-center justify-between">
               <button
                 className=" bg-purple-500 border-2 border-cyan-300 hover:bg-cyan-300 hover:border-purple-500  text-cyan-300 hover:text-purple-600 font-bold py-1 px-4 rounded-xl focus:outline-none focus:shadow-outline"
-                type="button"
+                type="submit"
               >
                 Sign In
               </button>
               <span
                 className="inline-block align-baseline font-bold text-sm text-rose-400 hover:text-rose-600"
-                onClick={(e)=>{
-                  navigate('/signup')
+                onClick={(e) => {
+                  navigate("/signup");
                 }}
               >
                 I don't have account

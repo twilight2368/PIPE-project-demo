@@ -21,6 +21,7 @@ export default function Register(props) {
                 id="username"
                 type="text"
                 placeholder="Username"
+                required
               />
             </div>
             <div className="mb-4">
@@ -35,6 +36,7 @@ export default function Register(props) {
                 id="username"
                 type="text"
                 placeholder="pipe@gmail.com"
+                required
               />
             </div>
             <div className="mb-6">
@@ -49,6 +51,7 @@ export default function Register(props) {
                 id="password"
                 type="password"
                 placeholder="******************"
+                required
               />
             </div>
             <div className="mb-6">
@@ -63,6 +66,7 @@ export default function Register(props) {
                 id="confirmpassword"
                 type="password"
                 placeholder="******************"
+                required
               />
             </div>
             <div className="mb-2">
@@ -82,8 +86,8 @@ export default function Register(props) {
             </div>
             <div className="flex items-center justify-between">
               <button
-                className=" mx-auto bg-blue-300 border-2 border-purple-600 hover:bg-purple-600 hover:border-blue-300  text-purple-600 hover:text-blue-300 font-bold py-1 px-4 rounded-xl focus:outline-none focus:shadow-outline"
-                type="button"
+                className=" mx-auto bg-cyan-300 border-2 border-purple-600 hover:bg-purple-600 hover:border-cyan-300  text-purple-600 hover:text-cyan-300 font-bold py-1 px-4 rounded-xl focus:outline-none focus:shadow-outline"
+                type="submit"
               >
                 Sign Up
               </button>

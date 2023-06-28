@@ -15,25 +15,25 @@ import {
 } from "@heroicons/react/24/outline";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import Footer from "./Footer";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, NavLink } from "react-router-dom";
 
 const products = [
   {
     name: "Search",
     description: "PIPE",
-    href: "#",
+    href: "/search",
     icon: MagnifyingGlassIcon,
   },
   {
     name: "Categories",
     description: "PIPE",
-    href: "#",
+    href: "/categories",
     icon: TagIcon,
   },
   {
     name: "All games",
     description: "PIPE",
-    href: "#",
+    href: "/all",
     icon: RocketLaunchIcon,
   },
 ];
@@ -77,13 +77,14 @@ export default function Header(props) {
               <Bars3Icon className="h-6 w-6" aria-hidden="true" />
             </button>
           </div>
-          <Popover.Group className="hidden lg:flex lg:gap-x-12">
-            <span
-              href="#"
-              className="text-sm font-semibold leading-6 text-white"
+          <Popover.Group className="hidden lg:flex lg:gap-x-8">
+            <NavLink
+              to={"/"}
+              key={"Home"}
+              className=" text-sm font-semibold leading-6 text-white no-underline active:no-underline px-4 focus:bg-purple-500 focus:rounded-xl focus:outline-none focus:shadow-outline"
             >
               Home
-            </span>
+            </NavLink>
             <Popover className="relative">
               <Popover.Button className="flex items-center gap-x-1 px-2 text-sm font-semibold leading-6 text-white focus:bg-purple-500 focus:rounded-xl focus:outline-none focus:shadow-outline">
                 Games
@@ -105,9 +106,10 @@ export default function Header(props) {
                 <Popover.Panel className="absolute -left-36 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-black-op shadow-lg ring-1 ring-gray-900/5">
                   <div className="p-2">
                     {products.map((item) => (
-                      <div
+                      <NavLink
                         key={item.name}
-                        className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-purple-600 "
+                        to={item.href}
+                        className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-purple-600 no-underline active:no-underline "
                       >
                         <div className="flex h-6 w-6 flex-none items-center justify-center rounded-lg bg-black-op group-hover:bg-purple-600">
                           <item.icon
@@ -116,32 +118,31 @@ export default function Header(props) {
                           />
                         </div>
                         <div className="flex-auto">
-                          <span
-                            href={item.href}
-                            className="block font-semibold text-white"
-                          >
+                          <span className="block font-semibold text-white">
                             {item.name}
                             <span className="absolute inset-0" />
                           </span>
                         </div>
-                      </div>
+                      </NavLink>
                     ))}
                   </div>
                 </Popover.Panel>
               </Transition>
             </Popover>
-            <span
-              href="#"
-              className="text-sm font-semibold leading-6 text-white"
+            <NavLink
+              to={"/charts"}
+              key={"Charts"}
+              className=" text-sm font-semibold leading-6 text-white no-underline active:no-underline px-4 focus:bg-purple-500 focus:rounded-xl focus:outline-none focus:shadow-outline"
             >
               Charts
-            </span>
-            <span
-              href="#"
-              className="text-sm font-semibold leading-6 text-white"
+            </NavLink>
+            <NavLink
+              to={"/collections"}
+              key={"Collections"}
+              className=" text-sm font-semibold leading-6 text-white no-underline active:no-underline px-3 focus:bg-purple-500 focus:rounded-xl focus:outline-none focus:shadow-outline"
             >
               Collections
-            </span>
+            </NavLink>
           </Popover.Group>
 
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
