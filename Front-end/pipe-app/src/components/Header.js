@@ -13,27 +13,26 @@ import {
   RocketLaunchIcon,
   TagIcon,
 } from "@heroicons/react/24/outline";
-import {
-  ChevronDownIcon,
-} from "@heroicons/react/20/solid";
+import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import Footer from "./Footer";
+import { useNavigate } from "react-router-dom";
 
 const products = [
   {
     name: "Search",
-    description: "Get a better understanding of your traffic",
+    description: "PIPE",
     href: "#",
     icon: MagnifyingGlassIcon,
   },
   {
     name: "Categories",
-    description: "Speak directly to your customers",
+    description: "PIPE",
     href: "#",
     icon: TagIcon,
   },
   {
     name: "All games",
-    description: "Speak directly to your customers",
+    description: "PIPE",
     href: "#",
     icon: RocketLaunchIcon,
   },
@@ -45,7 +44,8 @@ function classNames(...classes) {
 
 export default function Header(props) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [loggedin, setLoggedin] = useState(true);
+  const [loggedin, setLoggedin] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <>
@@ -61,6 +61,9 @@ export default function Header(props) {
                 className="h-14 w-full mx-auto"
                 src={require("../images/logo.png")}
                 alt=""
+                onClick={(e) => {
+                  navigate("/");
+                }}
               />
             </a>
           </div>
@@ -82,7 +85,7 @@ export default function Header(props) {
               Home
             </span>
             <Popover className="relative">
-              <Popover.Button className="flex items-center gap-x-1 px-2 text-sm font-semibold leading-6 text-white focus:bg-purple-500 focus:rounded-xl">
+              <Popover.Button className="flex items-center gap-x-1 px-2 text-sm font-semibold leading-6 text-white focus:bg-purple-500 focus:rounded-xl focus:outline-none focus:shadow-outline">
                 Games
                 <ChevronDownIcon
                   className=" h-5 w-5 flex-none text-gray-400"
@@ -202,14 +205,18 @@ export default function Header(props) {
             ) : (
               <>
                 <button
-                  href="#"
                   className="text-sm font-semibold leading-6 mx-2 btn-signup p-1"
+                  onClick={(e) => {
+                    navigate("/signup");
+                  }}
                 >
                   Sign up
                 </button>
                 <button
-                  href="#"
                   className="text-sm font-semibold leading-6 mx-2 btn-login p-1"
+                  onClick={(e) => {
+                    navigate("/login");
+                  }}
                 >
                   Log in
                 </button>
@@ -283,7 +290,7 @@ export default function Header(props) {
         </Dialog>
       </header>
       <div className="min-h-screen">{props.children}</div>
-      <Footer/>
+      <Footer />
     </>
   );
 }
