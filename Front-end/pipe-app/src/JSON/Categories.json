@@ -1,0 +1,128 @@
+[
+    {
+        "id" : 1,
+        "name": "Action",
+        "img" : "action.png"
+    },
+    {
+        "id" : 2,
+        "name": "RPG",
+        "img" : "rpg.png"
+    },
+    {
+        "id" : 3,
+        "name": "Strategy",
+        "img" : "strategy.png"
+    },
+    {
+        "id" : 4,
+        "name": "Free to play",
+        "img" : "free.png"
+    },
+    {
+        "id" : 5,
+        "name": "2D",
+        "img" : "2d.png"
+    },
+    {
+        "id" : 6,
+        "name": "3D",
+        "img" : "3d.png"
+    },
+    {
+        "id" : 7,
+        "name": "Open world",
+        "img" : "openworld.png"
+    },
+    {
+        "id" : 8,
+        "name": "Multiplayer",
+        "img" : "multiple.png"
+    },
+    {
+        "id" : 9,
+        "name": "Puzzle",
+        "img" : "puzzle.png"
+    },
+    {
+        "id" : 10,
+        "name": "Pixel",
+        "img" : "pixel.png"
+    },
+    {
+        "id" : 11,
+        "name": "Sports",
+        "img" : "sports.png"
+    },
+    {
+        "id" : 12,
+        "name": "First-person",
+        "img" : "first-person.png"
+    },
+    {
+        "id" : 13,
+        "name": "Anime",
+        "img" : "anime.png"
+    },
+    {
+        "id" : 14,
+        "name": "Arcade",
+        "img" : "arcade.png"
+    },
+    {
+        "id" : 15,
+        "name": "SCi-fi",
+        "img" : "sci-fi.png"
+    },
+    {
+        "id" : 16,
+        "name": "Shooting",
+        "img" : "shooting.png"
+    },
+    {
+        "id" : 17,
+        "name": "Rhythm",
+        "img" : "rhythm.png"
+    },
+    {
+        "id" : 18,
+        "name": "Horror",
+        "img" : "horror.png"
+    },
+    {
+        "id" : 19,
+        "name": "Third-person",
+        "img" : "third-person.png"
+    },
+    {
+        "id" : 20,
+        "name": "Female Protagonist",
+        "img" : "female.png"
+    },
+    {
+        "id" : 21,
+        "name": "Apocalyptic",
+        "img" : "apocalytic.png"
+    },
+    {
+        "id" : 22,
+        "name": "Adventure",
+        "img" : "adventure.png"
+    },
+    {
+        "id" : 23,
+        "name": "Explore",
+        "img" : "exlore.png"
+    },
+    {
+        "id" : 24,
+        "name": "Chess",
+        "img" : "chess.png"
+    },
+    {
+        "id" : 25,
+        "name": "Single-plyer",
+        "img" : "single.png"
+    }
+
+]

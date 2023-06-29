@@ -21,7 +21,7 @@ export default function Search(props) {
           class="p-2.5 ml-2 w-24 text-sm font-medium text-white bg-rose-400 rounded-lg border-0 hover:bg-rose-600 focus:ring-4 focus:outline-none focus:ring-red-800 lg:block md:block max-sm:hidden"
         >
           <RocketLaunchIcon className="h-5 pr-1 w-auto text-white-500 inline" />
-          <span className="lg:inline sm:hidden">search</span>
+          <span className="lg:inline sm:hidden">Search</span>
           <span class="sr-only">Search</span>
         </button>
       </form>

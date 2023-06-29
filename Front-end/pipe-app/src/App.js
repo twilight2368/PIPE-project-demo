@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Search from "./pages/Search";
+import Categories from "./pages/Categories";
 
 function App() {
   return (
@@ -16,7 +17,8 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Register />} />
-            <Route path="/search" element={<Search/>} />
+            <Route path="/search" element={<Search />} />
+            <Route path="/categories" element={<Categories/>}/>
             <Route path="*" element={<Notfound />} />
           </Routes>
         </Header>
