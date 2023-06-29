@@ -1,0 +1,122 @@
+[
+    {
+        "id" : 1,
+        "name": "Action",
+        "img" : "https://i.postimg.cc/x8kVxNt5/action.png"
+    },
+    {
+        "id" : 2,
+        "name": "RPG",
+        "img" : "https://i.postimg.cc/bJZqM5v1/rpg.png"
+    },
+    {
+        "id" : 3,
+        "name": "Strategy",
+        "img" : "https://i.postimg.cc/7h7wPT06/strategy.png"
+    },
+    {
+        "id" : 4,
+        "name": "Free to play",
+        "img" : "https://i.postimg.cc/vBNpVHbV/free.png"
+    },
+    {
+        "id" : 5,
+        "name": "2D",
+        "img" : "https://i.postimg.cc/XJYb5z5T/2d.png"
+    },
+    {
+        "id" : 6,
+        "name": "3D",
+        "img" : "https://i.postimg.cc/tTvHNNt7/3d.png"
+    },
+    {
+        "id" : 7,
+        "name": "Open world",
+        "img" : "https://i.postimg.cc/3rPwM3mN/openworld.png"
+    },
+    {
+        "id" : 8,
+        "name": "Multiplayer",
+        "img" : "https://i.postimg.cc/5jcTs7H9/multiple.png"
+    },
+    {
+        "id" : 9,
+        "name": "Puzzle",
+        "img" : "https://i.postimg.cc/Fs3HNwVZ/puzzle.png"
+    },
+    {
+        "id" : 10,
+        "name": "Pixel",
+        "img" : "https://i.postimg.cc/xjkdFXkB/pixel.png"
+    },
+    {
+        "id" : 11,
+        "name": "Sports",
+        "img" : "https://i.postimg.cc/rm7qL9d3/sports.png"
+    },
+    {
+        "id" : 12,
+        "name": "First-person",
+        "img" : "https://i.postimg.cc/TPC8TJsQ/first-person.png"
+    },
+    {
+        "id" : 13,
+        "name": "Arcade",
+        "img" : "https://i.postimg.cc/t4dQMjtK/arcade.png"
+    },
+    {
+        "id" : 14,
+        "name": "SCi-fi",
+        "img" : "https://i.postimg.cc/CKLhC5TP/sci-fi.png"
+    },
+    {
+        "id" : 15,
+        "name": "Shooting",
+        "img" : "https://i.postimg.cc/kgyMt8ZR/shooting.png"
+    },
+    {
+        "id" : 16,
+        "name": "Rhythm",
+        "img" : "https://i.postimg.cc/P5HrxK6k/rhythm.png"
+    },
+    {
+        "id" : 17,
+        "name": "Horror",
+        "img" : "https://i.postimg.cc/cCtPMyL5/horror.png"
+    },
+    {
+        "id" : 18,
+        "name": "Third-person",
+        "img" : "https://i.postimg.cc/RCnML2yB/third-person.png"
+    },
+    {
+        "id" : 19,
+        "name": "Female Protagonist",
+        "img" : "https://i.postimg.cc/G22WtswR/female.png"
+    },
+    {
+        "id" : 20,
+        "name": "Apocalyptic",
+        "img" : "https://i.postimg.cc/sDhR5SBD/apocalyptic.png"
+    },
+    {
+        "id" : 21,
+        "name": "Adventure",
+        "img" : "https://i.postimg.cc/nV5JsThP/adventure.png"
+    },
+    {
+        "id" : 22,
+        "name": "Explore",
+        "img" : "https://i.postimg.cc/yNV4qbLk/explore.png"
+    },
+    {
+        "id" : 23,
+        "name": "Chess",
+        "img" : "https://i.postimg.cc/zGYY7BWw/chess.png"
+    },
+    {
+        "id" : 24,
+        "name": "Single-plyer",
+        "img" : "https://i.postimg.cc/N0JgdtQg/single.png"
+    }
+]

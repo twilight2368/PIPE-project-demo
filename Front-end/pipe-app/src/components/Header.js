@@ -44,7 +44,7 @@ function classNames(...classes) {
 
 export default function Header(props) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [loggedin, setLoggedin] = useState(true);
+  const [loggedin, setLoggedin] = useState(false);
   const navigate = useNavigate();
 
   return (
@@ -270,18 +270,16 @@ export default function Header(props) {
                     </>
                   ) : (
                     <>
-                      <a
-                        href="#"
-                        className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white no-underline hover:bg-purple-600"
-                      >
-                        Sign up
-                      </a>
-                      <a
-                        href="#"
-                        className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white no-underline hover:bg-purple-600"
+                      <button                
+                        className="-mx-3 w-full block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white no-underline hover:bg-purple-600"
                       >
                         Log in
-                      </a>
+                      </button>
+                      <button         
+                        className="-mx-3 w-full block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white no-underline hover:bg-purple-600"
+                      >
+                        Sign up
+                      </button>
                     </>
                   )}
                 </div>

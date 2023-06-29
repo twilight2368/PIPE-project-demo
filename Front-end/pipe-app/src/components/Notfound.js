@@ -5,7 +5,7 @@ export default function Notfound(props) {
   const navigate = useNavigate();
   return (
     <>
-      <div className="text-white w-full h-auto  text-4xl bg-black-op  text-center relative">
+      <div className="text-white w-full h-full text-4xl bg-black-op text-center relative">
         <img
           src={require("../images/Notfound.jpg")}
           alt=""

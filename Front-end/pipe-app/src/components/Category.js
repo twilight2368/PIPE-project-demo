@@ -5,13 +5,12 @@ export default function Category(props) {
         <div className=" p-2 grid grid-rows-6 h-full">
           <div className=" row-span-4">
             <img
-              src={require("../images/categories/" + "adventure.png")}
+              src={props.img_path}
               alt=""
               className="block h-full w-auto mx-auto"
             />
           </div>
-          <div ></div>
-          <div className="mx-auto">1</div>
+          <div className="mx-auto text-xl bold">{props.name}</div>
         </div>
       </div>
     </>
