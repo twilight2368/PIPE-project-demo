@@ -20,7 +20,7 @@ export default function Notfound(props) {
         >
           <span className="px-2 text-2xl">Back to Earth</span>
           <GlobeAsiaAustraliaIcon className="h-6 w-6 text-white inline" />
-        </button>
+        </button> 
       </div>
     </>
   );
