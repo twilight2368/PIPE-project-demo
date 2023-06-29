@@ -8,7 +8,7 @@ export default function Footer(props) {
             alt=""
             className="h-12 mx-auto m-2 block"
           />
-          <a className=" text-white m-2 mx-4 p-0 px-1 no-underline max-lg:hidden text-xs btn-top" href="#">
+          <a className=" text-white m-2 mx-4 p-0 px-1 no-underline max-lg:hidden text-xs btn-top">
             Back to top
           </a>
         </div>
@@ -37,7 +37,7 @@ export default function Footer(props) {
             © 2023 PIPE game store. All Rights Reserved.
           </span>
         </div>
-      </footer>
+      </footer>  
     </>
   );
 }
