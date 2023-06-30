@@ -12,7 +12,7 @@ export default function Notfound(props) {
           className="block w-3/4 h-full mx-auto rounded-2xl"
         />
         <button
-          className="text-white absolute bottom-6 left-48 text-2xl border-2 border-gray-50 rounded-xl p-1"
+          className="text-white absolute bottom-6 left-48 text-2xl border-2 border-gray-50 rounded-xl p-1 max-lg:left-30 max-md:left-12 max-md:bottom-0"
           onClick={(e) => {
             e.preventDefault();
             navigate("/");
