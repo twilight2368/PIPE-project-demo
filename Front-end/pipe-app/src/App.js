@@ -8,6 +8,7 @@ import Register from "./pages/Register";
 import Search from "./pages/Search";
 import Categories from "./pages/Categories";
 import Games from "./pages/Games";
+import Game from "./pages/Game";
 
 function App() {
   return (
@@ -20,7 +21,8 @@ function App() {
             <Route path="/signup" element={<Register />} />
             <Route path="/search" element={<Search />} />
             <Route path="/categories" element={<Categories />} />
-            <Route path="/all" element={<Games/>} />
+            <Route path="/all" element={<Games />} />
+            <Route path="/all/:id" element={<Game />} />
             <Route path="*" element={<Notfound />} />
           </Routes>
         </Header>

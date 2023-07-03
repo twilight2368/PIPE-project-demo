@@ -44,7 +44,7 @@ function classNames(...classes) {
 
 export default function Header(props) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [loggedin, setLoggedin] = useState(true);
+  const [loggedin, setLoggedin] = useState(false);
   const navigate = useNavigate();
 
   return (
