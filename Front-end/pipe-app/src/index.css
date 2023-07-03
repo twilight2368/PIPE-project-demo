@@ -53,3 +53,20 @@
     @apply text-rose-400 text-xs;
     font-family: 'Nunito', sans-serif;
 }
+
+.brder_sp{
+    border-style: inset;
+}
+
+.scroll-bar-image{
+    overflow-y: hidden;
+    overflow-x: scroll;
+    white-space: nowrap;
+    scrollbar-width:auto;
+    scrollbar-color: #7742e5 black ;
+    scroll-behavior: smooth;
+}
+
+.bg-faded-black{
+    background-image: linear-gradient(90deg, rgba(0,0,0, 0.8), rgba(0,0,0,0), rgba(0,0,0,0));
+}

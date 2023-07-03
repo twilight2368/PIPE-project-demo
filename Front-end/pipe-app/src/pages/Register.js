@@ -74,6 +74,7 @@ export default function Register(props) {
                 <input
                   className="leading-tight mr-2 border-purple-600"
                   type="checkbox"
+                  required
                 />
                 <span className=" text-sm">
                   I have read and agree to PIPE's Privacy Policy
