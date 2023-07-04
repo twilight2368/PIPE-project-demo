@@ -15,8 +15,8 @@ export default function Rating(props) {
           <StarIcon
             className={
               star1 || star2 || star3 || star4 || star5
-                ? "h-6 w-6 text-purple-400"
-                : "h-6 w-6 text-gray-500"
+                ? "h-6 w-6 text-purple-400 duration-75"
+                : "h-6 w-6 text-gray-500 duration-75"
             }
             onMouseOver={(e) => {
               e.preventDefault();
@@ -30,8 +30,8 @@ export default function Rating(props) {
           <StarIcon
             className={
               star2 || star3 || star4 || star5
-                ? "h-6 w-6 text-purple-400"
-                : "h-6 w-6 text-gray-500"
+                ? "h-6 w-6 text-purple-400 duration-75"
+                : "h-6 w-6 text-gray-500 duration-75"
             }
             onMouseOver={(e) => {
               e.preventDefault();
@@ -45,8 +45,8 @@ export default function Rating(props) {
           <StarIcon
             className={
               star3 || star4 || star5
-                ? "h-6 w-6 text-purple-400"
-                : "h-6 w-6 text-gray-500"
+                ? "h-6 w-6 text-purple-400 duration-75"
+                : "h-6 w-6 text-gray-500 duration-75"
             }
             onMouseOver={(e) => {
               e.preventDefault();
@@ -60,8 +60,8 @@ export default function Rating(props) {
           <StarIcon
             className={
               star4 || star5
-                ? "h-6 w-6 text-purple-400"
-                : "h-6 w-6 text-gray-500"
+                ? "h-6 w-6 text-purple-400 duration-75"
+                : "h-6 w-6 text-gray-500 duration-75"
             }
             onMouseOver={(e) => {
               e.preventDefault();
@@ -74,7 +74,9 @@ export default function Rating(props) {
           />
           <StarIcon
             className={
-              star5 ? "h-6 w-6 text-purple-400" : "h-6 w-6 text-gray-500"
+              star5
+                ? "h-6 w-6 text-purple-400 duration-75"
+                : "h-6 w-6 text-gray-500 duration-75"
             }
             onMouseOver={(e) => {
               e.preventDefault();

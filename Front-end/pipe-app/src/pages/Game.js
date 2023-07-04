@@ -1,6 +1,6 @@
 import { StarIcon } from "@heroicons/react/20/solid";
 import Rating from "../components/Rating";
-export default function Game(params) {
+export default function Game(props) {
   return (
     <>
       <div>

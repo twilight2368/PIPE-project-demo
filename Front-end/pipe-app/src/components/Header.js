@@ -44,7 +44,7 @@ function classNames(...classes) {
 
 export default function Header(props) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [loggedin, setLoggedin] = useState(false);
+  const [loggedin, setLoggedin] = useState(true);
   const navigate = useNavigate();
 
   return (
@@ -154,7 +154,7 @@ export default function Header(props) {
                       <span className="sr-only">Open user menu</span>
                       <img
                         className="h-8 w-8 rounded-full"
-                        src={require("../images/gamer-female.png")}
+                        src={require("../images/gamepad.png")}
                         alt=""
                       />
                     </Menu.Button>
