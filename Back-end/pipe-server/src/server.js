@@ -1,12 +1,10 @@
 const cors = require("cors");
 const express = require("express");
 const app = express();
-const pool = require("./connection/database");
 const env = require("dotenv");
-const uuid = require("uuid");
-const bcrypt = require("bcrypt");
-const jwt = require("jsonwebtoken");
 const cookieParser = require("cookie-parser");
+const dataRoutes = require("./routes/dataRoutes");
+const authRoutes = require("./routes/authRoutes");
 env.config();
 
 app.use(express.json());
@@ -20,7 +18,12 @@ app.use(
   })
 );
 
+app.get('/', async (req, res) => {
+   res.send('hello world');
+})
 
+app.use(authRoutes)
+app.use(dataRoutes);
 
 app.listen(process.env.PORT, () => {
   console.log("App listening on port " + process.env.PORT);
