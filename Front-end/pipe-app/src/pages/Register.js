@@ -52,6 +52,7 @@ export default function Register(props) {
                 type="password"
                 placeholder="******************"
                 required
+                minLength={6}
               />
             </div>
             <div className="mb-6">

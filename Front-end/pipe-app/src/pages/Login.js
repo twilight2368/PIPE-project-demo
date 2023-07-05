@@ -39,6 +39,7 @@ export default function Login(props) {
                 id="password"
                 type="password"
                 placeholder="******************"
+                minLength={6}
                 required
               />
             </div>

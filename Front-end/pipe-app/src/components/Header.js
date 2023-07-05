@@ -171,32 +171,33 @@ export default function Header(props) {
                     <Menu.Items className="absolute right-0 z-10 mt-2 w-24 origin-top-right rounded-md bg-black-op py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                       <Menu.Item>
                         {({ active }) => (
-                          <a
-                            href="#"
+                          <button
                             className={classNames(
                               active
                                 ? "bg-purple-400 rounded-lg hover:text-black"
                                 : "",
                               "block px-4 py-2 text-sm text-gray-300 no-underline"
                             )}
+                            onClick={(e) => {
+                              navigate("/profile");
+                            }}
                           >
                             Your Profile
-                          </a>
+                          </button>
                         )}
                       </Menu.Item>
                       <Menu.Item>
                         {({ active }) => (
-                          <a
-                            href="#"
+                          <button
                             className={classNames(
                               active
                                 ? "bg-purple-400 rounded-lg hover:text-black"
                                 : "",
-                              "block px-4 py-2 text-sm text-gray-300 no-underline"
+                              "block w-full px-4 py-2 text-sm text-gray-300 no-underline"
                             )}
                           >
                             Sign out
-                          </a>
+                          </button>
                         )}
                       </Menu.Item>
                     </Menu.Items>
@@ -255,29 +256,27 @@ export default function Header(props) {
                 <div className="py-6">
                   {loggedin ? (
                     <>
-                      <a
-                        href="#"
+                      <button
                         className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white no-underline hover:bg-purple-600"
+                        onClick={(e) => {
+                          navigate("/profile");
+                        }}
                       >
                         My account
-                      </a>
-                      <a
+                      </button>
+                      <button
                         href="#"
                         className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white no-underline hover:bg-purple-600"
                       >
                         Log out
-                      </a>
+                      </button>
                     </>
                   ) : (
                     <>
-                      <button                
-                        className="-mx-3 w-full block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white no-underline hover:bg-purple-600"
-                      >
+                      <button className="-mx-3 w-full block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white no-underline hover:bg-purple-600">
                         Log in
                       </button>
-                      <button         
-                        className="-mx-3 w-full block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white no-underline hover:bg-purple-600"
-                      >
+                      <button className="-mx-3 w-full block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white no-underline hover:bg-purple-600">
                         Sign up
                       </button>
                     </>

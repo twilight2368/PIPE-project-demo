@@ -89,7 +89,9 @@ export default function Rating(props) {
           />
         </div>
         <div>
-          <button className=" bg-green-300 rounded-md px-3 mt-2">
+          <button className=" bg-green-300 rounded-md px-3 mt-2 disabled:hover:cursor-not-allowed" disabled onClick={(e)=> {
+            console.log('clicked');
+          }}>
             <span className=" text-black"> Save </span>
           </button>
         </div>

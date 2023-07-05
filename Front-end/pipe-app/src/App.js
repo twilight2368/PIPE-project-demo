@@ -11,6 +11,8 @@ import Games from "./pages/Games";
 import Game from "./pages/Game";
 import Collection from "./pages/Collection";
 import Charts from "./pages/Charts";
+import Profile from "./pages/Profile";
+import Developer from "./pages/Developer";
 
 function App() {
   return (
@@ -24,10 +26,11 @@ function App() {
             <Route path="/search" element={<Search />} />
             <Route path="/categories" element={<Categories />} />
             <Route path="/all" element={<Games />} />
-            <Route path="/charts" element={<Charts/>} />
+            <Route path="/charts" element={<Charts />} />
             <Route path="/all/:id" element={<Game />} />
-            <Route path="/collections/:id" element={<Collection />} />
-
+            <Route path="/collections" element={<Collection />} />
+            <Route path="/developer/:id" element={<Developer/>} />
+            <Route path="/profile/" element={<Profile />} />
             <Route path="*" element={<Notfound />} />
           </Routes>
         </Header>

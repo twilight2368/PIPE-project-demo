@@ -1,4 +1,5 @@
 import { StarIcon } from "@heroicons/react/24/solid";
+import { useNavigate, NavLink, Link } from "react-router-dom";
 
 export default function Game(props) {
   return (
@@ -13,7 +14,9 @@ export default function Game(props) {
             />
           </div>
 
-          <div className="pl-3 pt-1 max-xl:text-sm">404 Not found</div>
+          <div className="pl-3 pt-1 max-xl:text-sm">
+            <Link to={'/all/something'} className=" no-underline text-white">404 Not found</Link>
+          </div>
           <div className="pl-3 pt-2 pr-2 w-full">
             <div className=" flex justify-end items-center gap-1">
               <div className="h-3 w-3 flex justify-end items-center">
@@ -24,7 +27,9 @@ export default function Game(props) {
               </div>
             </div>
           </div>
-          <div className="pl-3 max-md:hidden max-xl:hidden">PIPE</div>
+          <div className="pl-3 max-md:hidden max-xl:hidden" >
+            <Link to={'/developer/id'} className=" text-white no-underline">PIPE</Link>
+          </div>
         </div>
       </div>
     </>

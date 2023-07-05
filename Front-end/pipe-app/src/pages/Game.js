@@ -1,6 +1,8 @@
 import { StarIcon } from "@heroicons/react/20/solid";
 import Rating from "../components/Rating";
+import { useNavigate } from "react-router-dom";
 export default function Game(props) {
+  const navigate = useNavigate();
   return (
     <>
       <div>
@@ -8,7 +10,14 @@ export default function Game(props) {
           <div className=" h-60 bg-black-op grid grid-cols-2 rounded-2xl">
             <div className=" text-white  px-6 py-4">
               <div className=" text-3xl">404 NOT FOUND</div>
-              <div className=" text-xl">PIPE</div>
+              <div
+                className=" text-xl"
+                onClick={(e) => {
+                  navigate("/developer/id");
+                }}
+              >
+                PIPE
+              </div>
               <div>
                 <span className=" text-lg">Category: </span>
                 <span className="mr-1">#hastag</span>
@@ -18,12 +27,18 @@ export default function Game(props) {
               </div>
               <div className="mt-4">
                 <span className=" mr-6">
-                  <button className="bg-blue-400 p-1 px-2 rounded-md ">
+                  <button
+                    className="bg-blue-400 p-1 px-2 rounded-md disabled:hover:cursor-not-allowed"
+                    disabled
+                  >
                     Download
                   </button>
                 </span>
                 <span className=" mr-6">
-                  <button className="bg-pink-400 p-1 px-2 rounded-md ">
+                  <button
+                    className="bg-pink-400 p-1 px-2 rounded-md disabled:hover:cursor-not-allowed"
+                    disabled
+                  >
                     Add to wishlist
                   </button>
                 </span>
