@@ -49,10 +49,14 @@ export default function Profile(props) {
           <input
             type="text"
             placeholder=""
-            value={"010101010101"}
+            value={'0000000000'}
             className="p-2 border-2 border-purple-600 rounded-md bg-gray-600 w-4/5 disabled:opacity-60"
             disabled={changeInfor ? false : true}
             id="phone"
+            onChange={(e)=>{
+              e.preventDefault()
+            }}
+            pattern="[0-9]{10}"
           />
         </div>
 
