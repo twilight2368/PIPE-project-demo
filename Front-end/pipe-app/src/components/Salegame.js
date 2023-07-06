@@ -21,8 +21,8 @@ export default function Salegame(params) {
           >
             404 Not found
           </div>
-          <div className=" col-span-3 row-span-2 text-3xl font-extrabold italic flex justify-center items-center salenumber">
-            100%
+          <div className=" col-span-3 row-span-2 font-extrabold italic flex flex-col justify-center items-center salenumber">
+            <div className="text-3xl">100%</div>
           </div>
           <div
             className=" col-span-5 row-span-1 "

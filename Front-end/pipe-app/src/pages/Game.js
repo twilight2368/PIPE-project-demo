@@ -1,4 +1,5 @@
 import { StarIcon } from "@heroicons/react/20/solid";
+import { BoltIcon } from "@heroicons/react/24/outline";
 import Rating from "../components/Rating";
 import { useNavigate } from "react-router-dom";
 export default function Game(props) {
@@ -25,7 +26,13 @@ export default function Game(props) {
                 <span className="mr-1">#hastag</span>
                 <span className="mr-1">#hastag</span>
               </div>
-              <div className="mt-4">
+              <div className="mt-2">
+                <span className=" text-black px-2 p border-2 bg-orange-400 border-orange-600 rounded-xl">
+                  <BoltIcon class="h-3 w-3 inline mr-1" />
+                  <span className=" font-semibold italic">00.00</span>
+                </span>
+              </div>
+              <div className="mt-3">
                 <span className=" mr-6">
                   <button
                     className="bg-blue-400 p-1 px-2 rounded-md disabled:hover:cursor-not-allowed"
