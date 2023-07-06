@@ -1,81 +1,109 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Dongle:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap");
 
-*{
-    font-family: 'Dongle', sans-serif;
-    font-size: 20px;
+* {
+  font-family: "Dongle", sans-serif;
+  font-size: 20px;
 }
 
-.App{
-    background-attachment: fixed;
-    background-image: url(./images/wallpaper.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.App {
+  background-attachment: fixed;
+  background-image: url(./images/wallpaper.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.bg-black-op{
-    background-color: rgba(0, 0, 0, 0.75);
+.bg-black-op {
+  background-color: rgba(0, 0, 0, 0.75);
 }
 
-.btn-top{
-    background-color: black;
-    border-radius: 10px;
-    border-color: aquamarine;
-    border-style: dotted;
-    border-width: 3px;
+.btn-top {
+  background-color: black;
+  border-radius: 10px;
+  border-color: aquamarine;
+  border-style: dotted;
+  border-width: 3px;
 }
 
-.btn-login{
-    @apply w-16;
-    background-image: linear-gradient(-135deg,#f13772, #912fb8);
-    color: #ff88b0;
-    border-radius: 25px;
-    border-style: inset;
-    border-color: #ff0000;
-    border-width: 2px;
+.btn-login {
+  @apply w-16;
+  background-image: linear-gradient(-135deg, #f13772, #912fb8);
+  color: #ff88b0;
+  border-radius: 25px;
+  border-style: inset;
+  border-color: #ff0000;
+  border-width: 2px;
 }
 
-.btn-signup{
-    @apply w-16;
-    background-image: linear-gradient(-135deg,#43cea2 , #185a9d);
-    border-radius: 25px;
-    color: rgb(0, 255, 225);
-    border-width: 2px;
-    border-style: inset;
-    border-color:#73f0a1;
+.btn-signup {
+  @apply w-16;
+  background-image: linear-gradient(-135deg, #43cea2, #185a9d);
+  border-radius: 25px;
+  color: rgb(0, 255, 225);
+  border-width: 2px;
+  border-style: inset;
+  border-color: #73f0a1;
 }
 
-.error_play{
-    @apply text-rose-400 text-xs;
-    font-family: 'Nunito', sans-serif;
+.error_play {
+  @apply text-rose-400 text-xs;
+  font-family: "Nunito", sans-serif;
 }
 
-.brder_sp{
-    border-style: inset;
+.brder_sp {
+  border-style: inset;
 }
 
-.scroll-bar-image{
-    overflow-y: hidden;
-    overflow-x: scroll;
-    white-space: nowrap;
-    scrollbar-width:auto;
-    scrollbar-color: #7742e5 black ;
-    scroll-behavior: smooth;
+.scroll-bar-image {
+  overflow-y: hidden;
+  overflow-x: scroll;
+  white-space: nowrap;
+  scrollbar-width: auto;
+  scrollbar-color: #7742e5 black;
+  scroll-behavior: smooth;
 }
 
-.bg-faded-black{
-    background-image: linear-gradient(90deg, rgba(0,0,0, 0.8), rgba(0,0,0,0), rgba(0,0,0,0));
+.bg-faded-black {
+  background-image: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0)
+  );
 }
 
-.scroll-bar-image-chart{
-    overflow-y: hidden;
-    overflow-x: hidden;
-    white-space: nowrap;
-    scrollbar-width:auto;
-    scrollbar-color: #7742e5 black ;
-    scroll-behavior: smooth;
+.scroll-bar-image-chart {
+  overflow-y: hidden;
+  overflow-x: hidden;
+  white-space: nowrap;
+  scrollbar-width: auto;
+  scrollbar-color: #7742e5 black;
+  scroll-behavior: smooth;
+}
+
+.bannersale {
+  background-image: url("../src/images/bannersale.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.salenumber {
+  background-color: #f7b42c;
+  background-image: linear-gradient(315deg, #f7b42c 0%, #fc575e 74%);
+  background-clip: text;
+  color: rgba(0, 0, 0, 0);
+}
+
+.bg-purple-op {
+  background-color: rgba(113, 0, 113, 0.3);
+}
+
+.bg-green-lin {
+  background-color: #7ee8fa;
+  background-image: linear-gradient(315deg, #7ee8fa 0%, #80ff72 74%);
 }

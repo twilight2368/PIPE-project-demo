@@ -5,20 +5,20 @@ import {
   ArrowSmallLeftIcon,
 } from "@heroicons/react/24/outline";
 
-export default function Chart(props) {
+export default function MainChart(props) {
    const div_ref = useRef();
   function handle_left() {
     const element = div_ref.current;
-    element.scrollBy(-610, 0);
+    element.scrollBy(-510, 0);
   }
   function handle_right() {
     const element = div_ref.current;
-    element.scrollBy(610, 0);
+    element.scrollBy(510, 0);
   }
   return (
     <>
       <div className=" w-auto mx-0 p-3 px-10 bg-black-op rounded-2xl my-6">
-        <h2 className=" mb-0 px-12 text-teal-50 ">Top 10 of something</h2>
+        <h2 className=" mb-0 px-12 text-teal-50 ">Just a chart</h2>
 
         <div className="relative h-48 w-full">
           <button
@@ -33,11 +33,12 @@ export default function Chart(props) {
           >
             <ArrowSmallRightIcon className="h-6 w-6 text-red-600" />
           </button>
+
           <div
-            className=" h-full w-full mx-auto pt-3 pl-0 px-16 pb-0 scroll-bar-image-chart"
+            className=" h-full w-full mx-auto pt-3 px-16 pl-0 pb-0 scroll-bar-image-chart"
             ref={div_ref}
           >
-            <div className=" h-3/4 w-1/4  mx-2 inline-block">
+            <div className=" h-3/4 w-1/4 mx-2 inline-block">
               <Game />
             </div>
             <div className=" h-3/4 w-1/4  mx-2 inline-block">
@@ -46,26 +47,20 @@ export default function Chart(props) {
             <div className=" h-3/4 w-1/4  mx-2 inline-block">
               <Game />
             </div>
-            <div className=" h-3/4 w-1/4 mx-2  inline-block">
+            <div className=" h-3/4 w-1/4  mx-2 inline-block">
               <Game />
             </div>
 
-            <div className=" h-3/4 w-1/4 500 mx-2 inline-block">
-              <Game />
-            </div>
             <div className=" h-3/4 w-1/4  mx-2 inline-block">
               <Game />
             </div>
             <div className=" h-3/4 w-1/4  mx-2 inline-block">
               <Game />
             </div>
-            <div className=" h-3/4 w-1/4   mx-2 inline-block">
+            <div className=" h-3/4 w-1/4  mx-2 inline-block">
               <Game />
             </div>
-            <div className=" h-3/4 w-1/4   mx-2 inline-block">
-              <Game />
-            </div>
-            <div className=" h-3/4 w-1/4   mx-2 inline-block">
+            <div className=" h-3/4 w-1/4  mx-2 inline-block">
               <Game />
             </div>
           </div>
