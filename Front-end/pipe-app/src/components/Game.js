@@ -4,7 +4,7 @@ import { useNavigate, NavLink, Link } from "react-router-dom";
 export default function Game(props) {
   return (
     <>
-      <div className="text-white h-40 w-full bg-black-op rounded-lg py-2.5 px-3 pb-2 max-lg:text-sm">
+      <div className="text-white h-full w-full bg-black-op rounded-lg py-2.5 px-3 pb-2 max-lg:text-sm">
         <div className=" h-full w-full grid grid-cols-2 grid-rows-6 max-lg:grid-rows-5">
           <div className="col-span-2 row-span-4 max-lg:row-span-3">
             <img
