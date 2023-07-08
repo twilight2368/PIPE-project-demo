@@ -1,4 +1,5 @@
 import Banner from "../components/Banner";
+import Categorymain from "../components/CategoryMain";
 import MainChart from "../components/MainChart";
 import MonthChart from "../components/MonthChart";
 import SaleBanner from "../components/SaleBanner";
@@ -29,6 +30,8 @@ export default function Home(props) {
 
           <SaleBanner />
 
+          <Categorymain />
+          
           <MainChart />
 
           <MainChart />

@@ -13,12 +13,14 @@ import Collection from "./pages/Collection";
 import Charts from "./pages/Charts";
 import Profile from "./pages/Profile";
 import Developer from "./pages/Developer";
+import ScrollToTop from "./components/Scrolltotop";
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <Header>
+          <ScrollToTop />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
@@ -29,7 +31,7 @@ function App() {
             <Route path="/charts" element={<Charts />} />
             <Route path="/all/:id" element={<Game />} />
             <Route path="/collections" element={<Collection />} />
-            <Route path="/developer/:id" element={<Developer/>} />
+            <Route path="/developer/:id" element={<Developer />} />
             <Route path="/profile/" element={<Profile />} />
             <Route path="*" element={<Notfound />} />
           </Routes>
