@@ -1,8 +1,23 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate, NavLink, Link } from "react-router-dom";
 
 export default function Banner(props) {
   const [showup, setShowup] = useState(false);
+  const [data, setData] = useState();
+
+  useEffect(() => {
+    fetch("http://localhost:3333/randomize")
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        //console.log(data);
+        setData(data);
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  }, []);
   return (
     <>
       <div
@@ -38,14 +53,28 @@ export default function Banner(props) {
             />
             <div className="mx-6 flex flex-col justify-start items-start">
               <div className=" text-sm">
-                <Link to={"/all/something"} className="no-underline text-white">
-                  404 Not found
-                </Link>
+                {data ? (
+                  <Link
+                    to={"/all/" + data.game_id}
+                    className="no-underline text-white overflow-hidden text-ellipsis"
+                  >
+                    <span>{data.game_name}</span>
+                  </Link>
+                ) : (
+                  <></>
+                )}
               </div>
               <div className=" text-sm">
-                <Link to={"/developer/something"} className="no-underline text-white">
-                  Pipe
-                </Link>
+                {data ? (
+                  <Link
+                    to={"/developer/" + data.developer_id}
+                    className="no-underline text-white overflow-hidden text-ellipsis"
+                  >
+                    <span>{data.dev_name}</span>
+                  </Link>
+                ) : (
+                  <></>
+                )}
               </div>
             </div>
           </div>

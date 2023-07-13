@@ -14,21 +14,35 @@ export default function Game(props) {
             />
           </div>
 
-          <div className="pl-3 pt-1 max-xl:text-sm">
-            <Link to={'/all/something'} className=" no-underline text-white">404 Not found</Link>
+          <div className="pl-3 pt-1 max-xl:text-xs  overflow-hidden truncate">
+            <Link
+              to={"/all/" + props.game_key}
+              className=" no-underline text-white truncate"
+              title={props.game_name}
+            >
+              {props.game_name}
+            </Link>
           </div>
           <div className="pl-3 pt-2 pr-2 w-full">
             <div className=" flex justify-end items-center gap-1">
               <div className="h-3 w-3 flex justify-end items-center">
-                <span className=" text-base">5.0</span>
+                <span className=" text-base ">
+                  {props.rating ? <>{props.rating}</> : <> -:- </>}
+                </span>
               </div>
               <div className="h-3 w-3 flex justify-center items-center">
                 <StarIcon className="h-12 w-12 text-yellow-500 block" />
               </div>
             </div>
           </div>
-          <div className="pl-3 max-md:hidden max-xl:hidden" >
-            <Link to={'/developer/id'} className=" text-white no-underline">PIPE</Link>
+          <div className="pl-3 max-md:hidden max-xl:hidden overflow-hidden truncate">
+            <Link
+              to={"/developer/" + props.dev_key}
+              className=" text-white no-underline overflow-hidden truncate"
+              title={props.game_dev}
+            >
+              {props.game_dev}
+            </Link>
           </div>
         </div>
       </div>

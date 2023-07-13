@@ -1,12 +1,49 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Game from "./Game";
 import { Link } from "react-router-dom";
 
 export default function Categorymain(props) {
+  const [genre, setGenre] = useState();
+
+  const [game, setGame] = useState();
+
+  const [notloading, setNotLoading] = useState(false)
+
   const [item1, setItem1] = useState(true);
   const [item2, setItem2] = useState(false);
   const [item3, setItem3] = useState(false);
   const [item4, setItem4] = useState(false);
+
+  function takegame(current){
+    fetch("http://localhost:3333/randomgenre/" + current)
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        //console.log(data);
+        setGame(data);
+        setNotLoading(true);
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  }
+
+  useEffect(() => {
+    setNotLoading(false);
+    fetch("http://localhost:3333/randomgenre")
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        //console.log(data);
+        setGenre(data);
+        takegame(data[0].genre_id)
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  }, []);
 
   function classNames(...classes) {
     return classes.filter(Boolean).join(" ");
@@ -34,9 +71,10 @@ export default function Categorymain(props) {
                 setItem2((prevItem) => false);
                 setItem3((prevItem) => false);
                 setItem4((prevItem) => false);
+                takegame(genre[0].genre_id);
               }}
             >
-              #hastag1
+              {genre ? <>#{genre[0].genre_name}</> : <></>}
             </button>
             <button
               className={classNames(
@@ -49,9 +87,10 @@ export default function Categorymain(props) {
                 setItem2((prevItem) => true);
                 setItem3((prevItem) => false);
                 setItem4((prevItem) => false);
+                takegame(genre[1].genre_id);
               }}
             >
-              #hastag2
+              {genre ? <>#{genre[1].genre_name}</> : <></>}
             </button>
             <button
               className={classNames(
@@ -64,9 +103,10 @@ export default function Categorymain(props) {
                 setItem2((prevItem) => false);
                 setItem3((prevItem) => true);
                 setItem4((prevItem) => false);
+                takegame(genre[2].genre_id);
               }}
             >
-              #hastag3
+              {genre ? <>#{genre[2].genre_name}</> : <></>}
             </button>
             <button
               className={classNames(
@@ -79,9 +119,10 @@ export default function Categorymain(props) {
                 setItem2((prevItem) => false);
                 setItem3((prevItem) => false);
                 setItem4((prevItem) => true);
+                takegame(genre[3].genre_id);
               }}
             >
-              #hastag4
+              {genre ? <>#{genre[3].genre_name}</> : <></>}
             </button>
           </nav>
 
@@ -103,18 +144,26 @@ export default function Categorymain(props) {
             classNames(item4 ? "border-orange-500" : "")
           }
         >
-          <div className=" h-36">
-            <Game />
-          </div>
-          <div className=" h-36">
-            <Game />
-          </div>
-          <div className=" h-36">
-            <Game />
-          </div>
-          <div className=" h-36">
-            <Game />
-          </div>
+          {notloading ? (
+            game.map((e) => {
+              return (
+                <>
+                  <div className=" h-36">
+                    <Game
+                      key={e.game_id}
+                      game_dev={e.dev_name}
+                      game_name={e.game_name}
+                      rating={e.rating}
+                      game_key={e.game_id}
+                      dev_key={e.developer_id}
+                    />
+                  </div>
+                </>
+              );
+            })
+          ) : (
+            <></>
+          )}
         </div>
       </div>
     </>

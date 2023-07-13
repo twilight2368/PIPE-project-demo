@@ -1,5 +1,6 @@
 import { useNavigate, NavLink, Link } from "react-router-dom";
-export default function Salegame(params) {
+import { BoltIcon } from "@heroicons/react/24/outline";
+export default function Salegame(props) {
   const navigate = useNavigate();
   return (
     <>
@@ -16,21 +17,24 @@ export default function Salegame(params) {
           <div
             className=" col-span-5 row-span-1"
             onClick={(e) => {
-              navigate("/all/something");
+              navigate("/all/" + props.game_key);
             }}
           >
-            404 Not found
+            {props.game_name}
           </div>
-          <div className=" col-span-3 row-span-2 font-extrabold italic flex flex-col justify-center items-center salenumber">
-            <div className="text-3xl">100%</div>
+          <div className=" col-span-3 row-span-2 font-extrabold italic flex flex-row justify-center items-center salenumber">
+            <span className="text-3xl">{props.price}</span>
+            <span>
+              <BoltIcon class="h-6 w-6 text-orange-600" />
+            </span>{" "}
           </div>
           <div
             className=" col-span-5 row-span-1 "
             onClick={(e) => {
-              navigate("/developer/something");
+              navigate("/developer/" + props.dev_key);
             }}
           >
-            PIPE
+            {props.game_dev}
           </div>
         </div>
       </div>

@@ -5,11 +5,11 @@ export default function Categories() {
   const [category, setCategory] = useState();
 
   useEffect(() => {
-    fetch("JSON/Categories.json")
+    fetch("http://localhost:3333/category")
       .then((response) => response.json())
       .then((data) => {
         setCategory(data);
-        console.log(data);
+        //console.log(data);
       })
       .catch((err) => {
         console.log(err);
@@ -21,7 +21,13 @@ export default function Categories() {
         {category ? (
           <>
             {category.map(function (e) {
-              return <Category key={e.id} name={e.name} img_path={e.img} />;
+              return (
+                <Category
+                  key={e.genre_id}
+                  name={e.genre_name}
+                  genre_key={e.genre_id}
+                />
+              );
             })}
           </>
         ) : (

@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Category(props) {
   return (
     <>
@@ -5,12 +7,20 @@ export default function Category(props) {
         <div className=" p-2 grid grid-rows-6 h-full">
           <div className=" row-span-4">
             <img
-              src={props.img_path}
+              src={require("../images/game.jpg")}
               alt=""
-              className="block h-full w-auto mx-auto"
+              className="block h-full w-auto mx-auto rounded-lg"
             />
           </div>
-          <div className="mx-auto text-xl bold">{props.name}</div>
+          <div className="mt-2 mx-auto text-xl bold">
+            <Link
+              to={"/category/" + props.genre_key}
+              className=" text-xl no-underline text-white"
+            >
+              {" "}
+              {props.name}
+            </Link>
+          </div>
         </div>
       </div>
     </>

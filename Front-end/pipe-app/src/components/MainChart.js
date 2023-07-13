@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Game from "./Game";
 import {
   ArrowSmallRightIcon,
@@ -6,6 +6,7 @@ import {
 } from "@heroicons/react/24/outline";
 
 export default function MainChart(props) {
+  const [data, setData] = useState();
   const div_ref = useRef();
   function handle_left() {
     const element = div_ref.current;
@@ -15,10 +16,24 @@ export default function MainChart(props) {
     const element = div_ref.current;
     element.scrollBy(510, 0);
   }
+
+  useEffect(() => {
+    fetch("http://localhost:3333/randomchart")
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        //console.log(data);
+        setData(data);
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  }, []);
   return (
     <>
       <div className=" w-auto mx-0 p-3 px-10 bg-black-op rounded-2xl my-6">
-        <h2 className=" mb-0 px-12 text-teal-50 ">Just a chart</h2>
+        <h2 className=" mb-0 px-12 text-teal-50 ">{props.namechart}</h2>
 
         <div className="relative h-48 w-full">
           <button
@@ -38,31 +53,26 @@ export default function MainChart(props) {
             className=" h-full w-full mx-auto pt-3 px-16 pl-0 pb-0 scroll-bar-image-chart"
             ref={div_ref}
           >
-            <div className=" w-1/4 h-4/5 mb-3 mx-2 inline-block">
-              <Game />
-            </div>
-            <div className=" w-1/4 h-4/5  mx-2 inline-block">
-              <Game />
-            </div>
-            <div className=" w-1/4 h-4/5  mx-2 inline-block">
-              <Game />
-            </div>
-            <div className=" w-1/4 h-4/5  mx-2 inline-block">
-              <Game />
-            </div>
-
-            <div className=" w-1/4 h-4/5  mx-2 inline-block">
-              <Game />
-            </div>
-            <div className=" w-1/4 h-4/5  mx-2 inline-block">
-              <Game />
-            </div>
-            <div className=" w-1/4 h-4/5  mx-2 inline-block">
-              <Game />
-            </div>
-            <div className=" w-1/4 h-4/5  mx-2 inline-block">
-              <Game />
-            </div>
+            {data ? (
+              data.map((e) => {
+                return (
+                  <>
+                    <div className=" w-1/4 h-4/5 mb-3 mx-2 inline-block">
+                      <Game
+                        key={e.game_id}
+                        game_dev={e.dev_name}
+                        game_name={e.game_name}
+                        rating={e.rating}
+                        game_key={e.game_id}
+                        dev_key={e.developer_id}
+                      />
+                    </div>
+                  </>
+                );
+              })
+            ) : (
+              <></>
+            )}
           </div>
         </div>
       </div>

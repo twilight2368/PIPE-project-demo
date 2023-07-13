@@ -1,4 +1,4 @@
-import { Fragment, useState } from "react";
+import { Fragment, useState, useEffect } from "react";
 import {
   Dialog,
   Disclosure,
@@ -16,6 +16,9 @@ import {
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import Footer from "./Footer";
 import { useNavigate, NavLink } from "react-router-dom";
+import { useContext } from "react";
+import { LoginContext } from "../App";
+
 
 const products = [
   {
@@ -44,8 +47,25 @@ function classNames(...classes) {
 
 export default function Header(props) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [loggedin, setLoggedin] = useState(false);
+  const [login, setLogin] = useContext(LoginContext);
   const navigate = useNavigate();
+  
+  function Logoutnow() {
+    fetch("http://localhost:3333/logout", {
+      method: "GET",
+      credentials: "include",
+      headers: {
+        "content-type": "application/json",
+      },
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        localStorage.removeItem("username");
+        setLogin(false)
+        navigate('/');
+        //console.log(data);
+      });
+  }
 
   return (
     <>
@@ -146,7 +166,7 @@ export default function Header(props) {
           </Popover.Group>
 
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            {loggedin ? (
+            {login ? (
               <>
                 <Menu as="div" className="relative ml-3">
                   <div>
@@ -195,6 +215,10 @@ export default function Header(props) {
                                 : "",
                               "block w-full px-4 py-2 text-sm text-gray-300 no-underline"
                             )}
+                            onClick={(e) => {
+                              e.preventDefault();
+                              Logoutnow();
+                            }}
                           >
                             Sign out
                           </button>
@@ -254,10 +278,10 @@ export default function Header(props) {
             <div className="mt-6 flow-root">
               <div className="-my-6 divide-y divide-gray-500/10">
                 <div className="py-6">
-                  {loggedin ? (
+                  {login ? (
                     <>
                       <button
-                        className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white no-underline hover:bg-purple-600"
+                        className="-mx-3 block w-full rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white no-underline hover:bg-purple-600"
                         onClick={(e) => {
                           navigate("/profile");
                         }}
@@ -265,8 +289,11 @@ export default function Header(props) {
                         My account
                       </button>
                       <button
-                        href="#"
-                        className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white no-underline hover:bg-purple-600"
+                        className="-mx-3 w-full block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white no-underline hover:bg-purple-600"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          Logoutnow();
+                        }}
                       >
                         Log out
                       </button>

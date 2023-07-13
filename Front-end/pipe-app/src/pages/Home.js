@@ -24,17 +24,17 @@ export default function Home(props) {
             </div>
           </div>
 
-          <MainChart />
+          <MainChart namechart="PIPES recommendation" />
 
-          <MainChart />
+          <MainChart namechart="PIPES YOLO" />
 
           <SaleBanner />
 
           <Categorymain />
-          
-          <MainChart />
 
-          <MainChart />
+          <MainChart namechart="Your mom loves these games" />
+
+          <MainChart namechart="Let's chill with PIPES"/>
         </div>
 
         <div className=" col-span-2 px-5">
