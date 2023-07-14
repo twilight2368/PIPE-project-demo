@@ -8,8 +8,11 @@ import Game from "../components/Game";
 export default function Search(props) {
   const [data, setData] = useState();
   const [word, setWord] = useState();
+  const [notfound, setNotfound] = useState(false)
 
   function searchSpecify() {
+    setNotfound(false);
+    setData(null)
     const data_search = {
       search: word,
     };
@@ -22,6 +25,10 @@ export default function Search(props) {
       body: JSON.stringify(data_search),
     })
       .then((response) => {
+        if (response.status === 404) {
+          setNotfound(true)
+          throw { error: "404 Notfound" };
+        }
         return response.json();
       })
       .then((data) => {
@@ -86,7 +93,17 @@ export default function Search(props) {
               );
             })
           ) : (
-            <></>
+            <>
+              {notfound ? (
+                <>
+                    <span className="text-3xl mx-auto p-4 rounded-lg error_play bg-black-op">
+                      Something went wrong
+                    </span>
+                </>
+              ) : (
+                <></>
+              )}
+            </>
           )}
         </div>
       </div>

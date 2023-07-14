@@ -30,4 +30,10 @@ data_router.get("/topfree", dataController.topfree);
 data_router.get("/toppaid", dataController.toppaid);
 
 data_router.post("/supersearch", dataController.superseach);
+
+data_router.get("/categoryforgame/:id", dataController.genresforone);
+
+data_router.get("/chart/:id", dataController.chartforall);
+
+data_router.get("/useraccount/:id", requireAuth , dataController.useraccount);
 module.exports = data_router;

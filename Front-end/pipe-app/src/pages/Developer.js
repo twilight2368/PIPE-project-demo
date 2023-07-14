@@ -61,7 +61,7 @@ export default function Developer(props) {
                 </li>
                 <li className=" list-inside list-disc">
                   {" "}
-                  Strating date: {mydata.starting_date}
+                  Strating date: {mydata.starting_date.split('T')[0]}
                 </li>
               </ul>
             </div>

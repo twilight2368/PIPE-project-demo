@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 export default function Game(props) {
   const navigate = useNavigate();
   const [mydata, setMydata] = useState();
+  const [genre, setGenre] = useState();
   let {id} = useParams();
 
   useEffect(()=>{
@@ -20,6 +21,22 @@ export default function Game(props) {
       console.log(e)
     });
   }, [])
+
+  useEffect(() => {
+    //console.log(id);
+    fetch("http://localhost:3333/categoryforgame/" + id)
+      .then((response) => {
+        console.log(response.status);
+        return response.json();
+      })
+      .then((data) => {
+        console.log(data);
+        setGenre(data);
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  }, []);
   return (
     <>
       {mydata ? (
@@ -32,10 +49,15 @@ export default function Game(props) {
                   <Link to={"/developer/" + mydata.developer_id} className="text-white no-underline text-xl"> {mydata.dev_name}</Link>
                   <div>
                     <span className=" text-lg">Category: </span>
-                    <span className="mr-1">#hastag</span>
-                    <span className="mr-1">#hastag</span>
-                    <span className="mr-1">#hastag</span>
-                    <span className="mr-1">#hastag</span>
+                    {
+                      genre ? <>{genre.map((e)=>{
+                          return (
+                            <>
+                              <Link to={'/category/' + e.genre_id} className="mr-1 text-lg overflow-hidden text-white no-underline text-ellipsis"> #{e.genre_name} </Link>
+                            </>
+                          );
+                      })}</> : <></>
+                    }
                   </div>
                   <div className="mt-2">
                     <span className=" text-black px-2 p border-2 bg-orange-400 border-orange-600 rounded-xl">

@@ -10,6 +10,7 @@ function requireAuth(req, res, next) {
     if (token) {
       jwt.verify(token, process.env.SECRET_KEY, (err, decodedToken) => {
         if (err) {
+          console.log("here1")
           res.status(403).json(err);
         } else {
           //console.log(decodedToken);
@@ -17,6 +18,7 @@ function requireAuth(req, res, next) {
         }
       });
     } else {
+       console.log("here2");
       res.status(403);
       res.json("403 Fobbiden");
     }

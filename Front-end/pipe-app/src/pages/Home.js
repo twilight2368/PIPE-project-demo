@@ -32,7 +32,7 @@ export default function Home(props) {
 
           <Categorymain />
 
-          <MainChart namechart="Your mom loves these games" />
+          <MainChart namechart="These games want you" />
 
           <MainChart namechart="Let's chill with PIPES"/>
         </div>

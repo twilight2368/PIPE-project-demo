@@ -20,7 +20,7 @@ export default function MonthChart(props) {
     <>
       <div className=" bg-black-op text-black w-full h-96 mb-10 rounded-xl">
         <div className=" w-full h-1/10 flex justify-center items-center">
-          <span className="text-3xl font-bold chartheader monthchart">
+          <span className="text-3xl w-full text-center font-bold chartheader monthchart">
             Top paid
           </span>
         </div>

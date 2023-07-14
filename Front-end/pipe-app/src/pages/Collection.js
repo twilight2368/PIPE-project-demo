@@ -4,11 +4,41 @@ import {
   ArrowSmallRightIcon,
   ArrowSmallLeftIcon,
 } from "@heroicons/react/24/outline";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Collection(props) {
+  const [data, setData] = useState();
+  const navigate = useNavigate();
+  const user = localStorage.getItem("username");
 
   const wishlist_div_ref = useRef();
   const downloaded_div_ref = useRef();
+
+
+  useEffect((e) => {
+    fetch("http://localhost:3333/useraccount/" + user, {
+      method: "GET",
+      credentials: "include",
+      headers: {
+        "content-type": "application/json",
+      },
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw { error: "Something went wrong" };
+        }
+        return response.json();
+      })
+      .then((data) => {
+        console.log(data);
+        setData(data);
+      })
+      .catch((e) => {
+        navigate("/login");
+        console.log(e);
+      });
+  }, []);
 
   function handle_left_wishlist() {
      const element = wishlist_div_ref.current;
